@@ -3,10 +3,12 @@ MIUI 12 Custom Module (Xposed)
 
 ## Feature
 10s CountDownTimer Bypass
+
 Global High Frame Rate
 
 ## APP Version Tested
 Security Center: `5.4.0`、`5.6.0`
+
 PowerKeeper: `4.2.00`
 
 ## SecurityCenterHook
