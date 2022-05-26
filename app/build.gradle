@@ -9,8 +9,8 @@ android {
         applicationId "com.xhy.xp.miuicustom"
         minSdk 23
         targetSdk 31
-        versionCode 1001
-        versionName "1.001"
+        versionCode 1010
+        versionName "1.010"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
