@@ -7,7 +7,7 @@ MIUI 12 Custom Module (Xposed)
 Global High Frame Rate
 
 ## APP Version Tested
-Security Center: `5.4.0`、`5.6.0`
+Security Center: `5.4.0`、`5.6.0`、`7.2.1`(Recommend)
 
 PowerKeeper: `4.2.00`
 

@@ -1,7 +1,5 @@
 package com.xhy.xp.miuicustom.dispatch;
 
-import static de.robv.android.xposed.XposedHelpers.findAndHookMethod;
-
 import java.lang.reflect.Method;
 
 import de.robv.android.xposed.XC_MethodHook;
@@ -13,6 +11,27 @@ import de.robv.android.xposed.callbacks.XC_LoadPackage;
 public class SecurityCenterHook {
     public static void handleLoadPackage(XC_LoadPackage.LoadPackageParam lpparam) {
         // miui-countdowntimer-bypass
+
+        XC_MethodReplacement methodReplacement_d = new XC_MethodReplacement() {
+            @Override
+            protected Object replaceHookedMethod(XC_MethodHook.MethodHookParam param) throws Throwable {
+                Method mtdConfirm = param.thisObject.getClass().getDeclaredMethod("d", boolean.class);
+                mtdConfirm.invoke(param.thisObject, true);
+                return null;
+            }
+        };
+
+        // 7.1.2
+        Method mtd_SpecialPermissionIntercept_712 = XposedHelpers.findMethodExactIfExists("com.miui.permcenter.privacymanager.InterceptBaseFragment", lpparam.classLoader, "n");
+        if (mtd_SpecialPermissionIntercept_712 != null) {
+            XposedBridge.hookMethod(mtd_SpecialPermissionIntercept_712, methodReplacement_d);
+        }
+
+        // 5.6.0
+        Method mtd_SpecialPermissionIntercept_560 = XposedHelpers.findMethodExactIfExists("com.miui.permcenter.privacymanager.h", lpparam.classLoader, "n");
+        if (mtd_SpecialPermissionIntercept_560 != null) {
+            XposedBridge.hookMethod(mtd_SpecialPermissionIntercept_560, methodReplacement_d);
+        }
 
         // 5.4.0
         Method mtd_SpecialPermissionIntercept_540 = XposedHelpers.findMethodExactIfExists("com.miui.permcenter.privacymanager.d", lpparam.classLoader, "c");
@@ -27,17 +46,5 @@ public class SecurityCenterHook {
             });
         }
 
-        // 5.6.0
-        Method mtd_SpecialPermissionIntercept_560 = XposedHelpers.findMethodExactIfExists("com.miui.permcenter.privacymanager.h", lpparam.classLoader, "n");
-        if (mtd_SpecialPermissionIntercept_560 != null) {
-            XposedBridge.hookMethod(mtd_SpecialPermissionIntercept_560, new XC_MethodReplacement() {
-                @Override
-                protected Object replaceHookedMethod(XC_MethodHook.MethodHookParam param) throws Throwable {
-                    Method mtdConfirm = param.thisObject.getClass().getDeclaredMethod("d", boolean.class);
-                    mtdConfirm.invoke(param.thisObject, true);
-                    return null;
-                }
-            });
-        }
     }
 }
