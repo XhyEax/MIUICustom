@@ -6,10 +6,10 @@ MIUI 12 Custom Module (Xposed)
 
 Global High Frame Rate
 
-## APP Version Tested
-Security Center: `5.4.0`、`5.6.0`、`7.2.1`(Recommend)
+## APP Domain and Version Tested
+`Security` (`com.miui.securitycenter`): `5.4.0`、`5.6.0`、`7.2.1` (Recommend)
 
-PowerKeeper: `4.2.00`
+`Battery and performance` (`com.miui.powerkeeper`): `4.2.00`
 
 ## SecurityCenterHook
 [miui-countdowntimer-bypass](https://blog.xhyeax.com/2021/10/02/miui-countdowntimer-bypass/)
