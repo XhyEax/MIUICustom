@@ -21,10 +21,10 @@ public class SecurityCenterHook {
             }
         };
 
-        // 7.1.2
-        Method mtd_SpecialPermissionIntercept_712 = XposedHelpers.findMethodExactIfExists("com.miui.permcenter.privacymanager.InterceptBaseFragment", lpparam.classLoader, "n");
-        if (mtd_SpecialPermissionIntercept_712 != null) {
-            XposedBridge.hookMethod(mtd_SpecialPermissionIntercept_712, methodReplacement_d);
+        // 7.2.1
+        Method mtd_SpecialPermissionIntercept_721 = XposedHelpers.findMethodExactIfExists("com.miui.permcenter.privacymanager.InterceptBaseFragment", lpparam.classLoader, "n");
+        if (mtd_SpecialPermissionIntercept_721 != null) {
+            XposedBridge.hookMethod(mtd_SpecialPermissionIntercept_721, methodReplacement_d);
         }
 
         // 5.6.0
