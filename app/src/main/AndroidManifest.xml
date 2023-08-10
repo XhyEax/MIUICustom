@@ -15,16 +15,19 @@
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="de.robv.android.xposed.category.MODULE_SETTINGS" />
             </intent-filter>
         </activity>
 
+        <meta-data
+            android:name="xposedscope"
+            android:resource="@array/xposed_scope" />
         <meta-data
             android:name="xposedmodule"
             android:value="true" />
         <meta-data
             android:name="xposeddescription"
-            android:value="MIUI 12 Custom Module" />
+            android:value="MIUI 12+ Custom Module" />
         <meta-data
             android:name="xposedminversion"
             android:value="82" />

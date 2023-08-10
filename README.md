@@ -7,7 +7,7 @@ MIUI 12 Custom Module (Xposed)
 Global High Frame Rate
 
 ## APP Domain and Version Tested
-`Security` (`com.miui.securitycenter`): `5.4.0`、`5.6.0`、`7.2.1` 、`7.5.5` 
+`Security` (`com.miui.securitycenter`): `5.4.0`、`5.6.0`、`7.0.0` 、`7.2.1` 、`7.5.5` 
 
 `Battery and performance` (`com.miui.powerkeeper`): `4.2.00`
 
