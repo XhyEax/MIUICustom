@@ -9,8 +9,8 @@ android {
         applicationId "com.xhy.xp.miuicustom"
         minSdk 23
         targetSdk 31
-        versionCode 1011
-        versionName "1.011"
+        versionCode 1012
+        versionName "1.012"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -25,6 +25,7 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+    namespace 'com.xhy.xp.miuicustom'
 }
 
 dependencies {

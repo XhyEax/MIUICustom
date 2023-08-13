@@ -1,5 +1,5 @@
 # MIUICustom
-MIUI 12 Custom Module (Xposed)
+MIUI 12+ Custom Module (Xposed)
 
 ## Feature
 10s CountDownTimer Bypass
